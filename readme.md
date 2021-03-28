@@ -12,7 +12,7 @@ https://drive.google.com/drive/folders/1PWxUckhEZdz7VetuqyQUffeUO1SWzh4i?usp=sha
 This files contains the trained weights of the models etc. After you've downloaded the file place it inside the root of the repository folder.
 
 2. To create images from the models type in the command line:  
-`python create.py "file_name_without_pkl"`
+`python create.py "file_name_without_pkl"` for example `python create.py "pcdcgan_alpha_001"`
 
 3. To evaluate the model with Inception Score and Frechet Inception Distance type in the command line:  
 `python evalute.py "file_name_without_pkl"`  
