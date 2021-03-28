@@ -2,10 +2,12 @@
 In this project, we compared the traditional CDCGAN (Conditional Deep Convolutional Generative adversarial network) with PCDCGAN (Predictive Deep Convolutional Generative Adversarial Network)
 
 <br />
+
 ## How to start
 Firstable clone the repository to your computer, then open the command line on the path of the cloned repository.
 
 <br />
+
 ## To use pretrained models
 1. Download one of the models from the following link:
 https://drive.google.com/drive/folders/1PWxUckhEZdz7VetuqyQUffeUO1SWzh4i?usp=sharing <br />
@@ -18,6 +20,7 @@ This files contains the trained weights of the models etc. After you've download
 `python evalute.py "file_name_without_pkl"`
 
 <br />
+
 ## Train and use a new models
 To train and use a new pcdcgan model type in the command line:
 `python pcdcgan.py "file_name_without_pkl"`
