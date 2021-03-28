@@ -5,6 +5,7 @@ https://drive.google.com/drive/folders/1PWxUckhEZdz7VetuqyQUffeUO1SWzh4i?usp=sha
 2. To create images from the models type:
 
 `python create.py "file_name_without_pkl"`
+
 3. To evalute the model with Inception Score and Frechet Inception  Distance type:
 
 `python evalute.py "file_name_without_pkl"`
@@ -13,6 +14,7 @@ https://drive.google.com/drive/folders/1PWxUckhEZdz7VetuqyQUffeUO1SWzh4i?usp=sha
 To train and use a new pcdcgan model type
 
 `python pcdcgan.py "file_name_without_pkl"`
+
 To train and use a new cdcgan model type:
 
 `python cdcgan.py "file_name_without_pkl"`
