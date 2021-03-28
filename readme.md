@@ -1,5 +1,5 @@
 In this project we compared the traditional cdcgan (Conditional Deep Convolutional Generative adversarial network) with PCDCGAN (Predictive Deep Convolutional Generative Adversarial Network)
-# To use pretrained images:
+# To use pretrained models:
 1. download at least one of the models from:
 https://drive.google.com/drive/folders/1PWxUckhEZdz7VetuqyQUffeUO1SWzh4i?usp=sharing
 2. To create images from the models type:
