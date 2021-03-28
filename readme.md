@@ -24,6 +24,6 @@ To train and use a new pcdcgan model type in the command line:
 
 To train and use a new cdcgan model type in the command line:  
 `python cdcgan.py "file_name_without_pkl"`  
-  
-You can keep training the new models/pretrained models with the same command.
+   
+You can keep training the new models/pretrained models with the same command.  
 Enjoy!
