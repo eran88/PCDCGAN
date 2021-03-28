@@ -116,9 +116,7 @@ def train_cgan(generator, discriminator, train_loader, lr=0.0001, latent_vector_
                 g_optimizer.step()
         print(f'Epoch {epoch}, Batch {batch_i}, Disc_loss: {discriminator_loss.item()}, Gen_loss: {generator_loss.item()}')
         if((epoch+1)%save_file==0):
-            with open(file_name, 'wb') as f:  # Python 3: open(..., 'wb')
-                pickle.dump([generator, discriminator,losses], f)
-                print("saved file to: "+file_name)
+            file_save(file_name,generator, discriminator,losses,device)
         # keep track of losses
         losses.append((discriminator_loss.item(), generator_loss.item()))
 

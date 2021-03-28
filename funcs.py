@@ -11,7 +11,7 @@ if torch.cuda.is_available():
     device = torch.device('cuda:0')
 else:
     device = torch.device("cpu")
-
+import pickle
 latent_vector_size=100
 class_size=7
 def load_data(filename):
@@ -148,3 +148,13 @@ def create(gen):
 
 
     return
+
+def file_save(file_name,generator, discriminator,losses,device):
+    with open(file_name, 'wb') as f:
+        cpu_device=torch.device("cpu")
+        generator.to(cpu_device)
+        discriminator.to(cpu_device)    
+        pickle.dump([generator, discriminator,losses], f)
+        generator.to(device)
+        discriminator.to(device)        
+        print("saved file to: "+file_name)    

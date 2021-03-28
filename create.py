@@ -23,7 +23,7 @@ def main():
     gen = None
     with open(my_file, 'rb') as f:
         gen, _, _ = pickle.load(f)
-
+    gen.to(device)
     return create(gen)
 
 
