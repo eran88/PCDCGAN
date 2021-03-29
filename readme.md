@@ -15,7 +15,7 @@ This files contains the trained weights of the models etc. After you've download
 `python create.py "file_name_without_pkl"` for example `python create.py "pcdcgan_alpha_001"`
 
 3. To evaluate the model with Inception Score and Frechet Inception Distance type in the command line:  
-`python evalute.py "file_name_without_pkl"`  
+`python evaluate.py "file_name_without_pkl"`  
 
 
 ## Train and use a new models
