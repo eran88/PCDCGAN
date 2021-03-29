@@ -125,13 +125,13 @@ def show_images(imgs,title="Training Images",size=32,figsize=(7,7)):
     plt.figure(figsize=figsize)
     plt.axis("off")
     plt.title(title)
-    plt.imshow(np.transpose(vutils.make_grid(imgs[:size], padding=2, normalize=True ).cpu(),(1,2,0)))
+    plt.imshow(np.transpose(vutils.make_grid(imgs[:size+1], padding=2, normalize=True,nrow =7 ).cpu(),(1,2,0)))
     plt.show()
 def create(gen):
     gen.eval()
-    noise,classes=create_latent_batch_vectors(64, latent_vector_size,class_size, device,probs=[1/7,1/7,1/7,1/7,1/7,1/7,1/7])
+    noise,classes=create_latent_batch_vectors(49, latent_vector_size,class_size, device,probs=[1/7,1/7,1/7,1/7,1/7,1/7,1/7])
     b=gen(noise,classes).detach()
-    show_images(b,"generator images",size=64,figsize=(8,8))
+    show_images(b,"generator images",size=49,figsize=(7,7))
     noise,classes=create_latent_batch_vectors(7, latent_vector_size,class_size, device,probs=[1/7,1/7,1/7,1/7,1/7,1/7,1/7])
     news=[]
     classes=[]
@@ -139,8 +139,6 @@ def create(gen):
         for j in range(class_size):
             news.append(noise[i])
             classes.append(j)
-        news.append(noise[i])
-        classes.append(class_size-1)
     classes=torch.Tensor(classes).to(device)
     noise = torch.stack(news).to(device)
     b=gen(noise,classes).detach()
