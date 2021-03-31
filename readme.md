@@ -3,13 +3,13 @@ In this project, we compared the traditional CDCGAN (Conditional Deep Convolutio
 
 
 ## How to start
-Firstable clone the repository to your computer, then open the command line on the path of the cloned repository.  
+First, clone the repository to your computer, then open the command line on the path of the cloned repository.  
 
 
 ## To use pretrained models
 1. Download one of the models from the following link:
 https://drive.google.com/drive/folders/1PWxUckhEZdz7VetuqyQUffeUO1SWzh4i?usp=sharing <br />
-This files contains the trained weights of the models etc. After you've downloaded the file place it inside the root of the repository folder.
+This files contains the pretrained models of both architectures. After you've downloaded the file place it inside the root of the repository folder.
 
 2. To create images from the models type in the command line:  
 `python create.py "file_name_without_pkl"` for example `python create.py "pcdcgan_alpha_001"`
@@ -25,5 +25,5 @@ To train and use a new pcdcgan model type in the command line:
 To train and use a new cdcgan model type in the command line:  
 `python cdcgan.py "file_name_without_pkl"`  
    
-You can keep training the new models/pretrained models with the same command.  
+You can keep training the new models or pretrained models with the same command.  
 Enjoy!

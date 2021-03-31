@@ -142,7 +142,7 @@ def create(gen):
     classes=torch.Tensor(classes).to(device)
     noise = torch.stack(news).to(device)
     b=gen(noise,classes).detach()
-    show_images(b,"Surprise  |  Fear  |  Disgust  |  Happiness  |  Sadness  |  Anger  |  Neutral",size=48,figsize=(8,8))
+    show_images(b,"Surprise         Fear           Disgust      Happiness       Sadness         Anger         Neutral",size=48,figsize=(8,8))
 
 
     return
